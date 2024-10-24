@@ -9,6 +9,20 @@ zabbix_export:
       name: 'processes and tcp ports monitoring windows by thawthuhan'
       groups:
         - name: Templates/Linux
+      items:
+        - uuid: 6e95d5486b6143b8a636457fbe7b1732
+          name: 'OS Version'
+          key: os.get.ver
+          value_type: TEXT
+          trends: '0'
+          preprocessing:
+            - type: STR_REPLACE
+              parameters:
+                - 'OS Name:'
+                - ''
+            - type: LTRIM
+              parameters:
+                - ' '
       discovery_rules:
         - uuid: 3d7471a3daf34c5f8a0166a38e1ee6e7
           name: 'Windows TCP Ports Discovery'

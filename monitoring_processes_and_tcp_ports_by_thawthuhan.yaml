@@ -27,6 +27,11 @@ zabbix_export:
               expression: 'last(/processes and tcp ports monitoring by thawthuhan/java.job.status)=0'
               name: 'Java Application Job Status'
               priority: HIGH
+        - uuid: 23f10bce75a14ef3895fbefa9c5064c7
+          name: 'OS Version'
+          key: os.get.ver
+          value_type: TEXT
+          trends: '0'
       discovery_rules:
         - uuid: 1dd6f949ce304b60816d62966092d1fe
           name: 'TCP Ports Discovery'
