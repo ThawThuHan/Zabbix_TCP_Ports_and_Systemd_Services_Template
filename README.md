@@ -24,16 +24,22 @@ in this example, only create item and trigger for service sshd, mysqld, nginx an
 There are no template links in this template.
 
 ## Discovery rules
-
-### For TCP Ports Template
+### Linux
+#### For TCP Ports Template
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |TCP Ports Discovery|<p>Discovers TCP within a single instance specified by Users Parameter.</p>|`Zabbix agent`|netstat.tcp.listen <p>Update Interval 1h</p>|
 
-### For Systemd Services Template
+#### For Systemd Services Template
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |Service Discovery|<p>Discovers Systemd Services within a single instance specified by Users Parameter.</p>|`Zabbix agent`|check_services.all <p>Update Interval 1h</p>|
+
+### Windoes
+#### For TCP Ports Template
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|Windows TCP Ports Discovery|<p>Discovers TCP within a single instance specified by Users Parameter.</p>|`Zabbix agent`|windows.netstat.tcp.listen <p>Update Interval 1h</p>|
 
 ## Items collected
 ### Linux
